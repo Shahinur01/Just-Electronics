@@ -49,11 +49,11 @@ const Order = () => {
           {orders?.map((order) => (
             <tbody>
               <tr>
-                <td>{order.productInfo.name}</td>
+                <td>{order.productInfo?.name}</td>
                 <td>1</td>
-                <td>${order.productInfo.price}</td>
-                <td>{order.shipment.address}</td>
-                <td>{order.shipment.mobile}</td>
+                <td>${order.productInfo?.price}</td>
+                <td>{order.shipment?.address}</td>
+                <td>{order.shipment?.mobile}</td>
                 <td>
                   {new Date(order.orderTime).toDateString(
                     "dd/mm/yyyy HH:mm:ss"
